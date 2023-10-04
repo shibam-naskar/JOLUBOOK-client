@@ -94,7 +94,7 @@ const Posts = (props) => {
 
   const addComment = () => {
 
-    console.log(values.comments)
+    // console.log(values.comments)
     if (text) {
       comment({
         userId: user1.id
@@ -105,7 +105,7 @@ const Posts = (props) => {
           setText('')
           updateComments(data.comments)
         } else {
-          console.log("error")
+          // console.log("error")
         }
       })
     }

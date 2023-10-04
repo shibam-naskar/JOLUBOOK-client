@@ -57,7 +57,7 @@ const Post = (props1) => {
       setPicLoading(false);
     } catch (error) {
       setPicLoading(false);
-      console.log(error)
+      // console.log(error)
       toast.error('SomeThing Wrong', { position: toast.POSITION.TOP_LEFT, autoClose: 1000 })
     };
     setPicLoading(false);
@@ -80,8 +80,8 @@ const Post = (props1) => {
         .then((res) => res.json())
         .then((data) => {
           setPic(data.url.toString());
-          console.log(data.url.toString());
-          console.log(data)
+          // console.log(data.url.toString());
+          // console.log(data)
           setType(data.resource_type.toString())
           setDemopic(data.url.toString())
           setPicLoading1(false);
@@ -92,7 +92,7 @@ const Post = (props1) => {
           setPicLoading1(false);
         });
     } else if (pics.type == "video/mp4") {
-      console.log(pics)
+      // console.log(pics)
       const data = new FormData();
       data.append("file", pics);
       data.append("upload_preset", "chat-app");
@@ -104,11 +104,10 @@ const Post = (props1) => {
         .then((res) => res.json())
         .then((data) => {
           setPic(data.url.toString());
-          console.log(data.url.toString());
-          console.log(data)
+          // console.log(data.url.toString());
+          // console.log(data)
           setType(data.resource_type.toString())
           setDemopic(data.url.toString());
-          // console.log("https://res.cloudinary.com/dwjy0lwss/video/upload/v1696227496/pajkmxazhswd4kmsowl0.mp4".toString().endsWith(".mp4"))
           setPicLoading1(false);
           return
         })

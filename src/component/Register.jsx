@@ -43,7 +43,7 @@ const Register = ({ history }) => {
     event.preventDefault();
 
     signInWithPopup(auth, new GoogleAuthProvider()).then((data) => {
-      console.log(data.user)
+      // console.log(data.user)
       if(data.user.email.toString().endsWith("jgec.ac.in")){
         var finaldata = {
           "email": data.user.email,
@@ -60,7 +60,7 @@ const Register = ({ history }) => {
       // setValue(data.user.email)
       // localStorage.setItem("email", data.user.email)
     })
-    console.log(data)
+    // console.log(data)
 
 
 

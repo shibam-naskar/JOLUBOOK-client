@@ -19,13 +19,13 @@ const HomePage = () => {
   const [isnew, setnew] = useState(false);
   const [page, setPage] = useState(1)
 
-  console.log(posts);
+  // console.log(posts);
 
   const nav = useNavigate()
 
   function Addone(data1) {
     setnew(true)
-    console.log(data1)
+    // console.log(data1)
     const updatedPosts = [...posts]
     updatedPosts.splice(0, 0, data1);
     setTimeout(function () {
@@ -72,7 +72,7 @@ const HomePage = () => {
       t: jwt.token
     }
     ).then((data) => {
-      console.log(data)
+      // console.log(data)
       const concatarr = posts.concat(data);
       SetPosts(concatarr)
     })
@@ -83,10 +83,10 @@ const HomePage = () => {
 
 
   const updata = (post) => {
-    console.log(post)
+    // console.log(post)
 
     let updated = [...posts]
-    console.log(updated)
+    // console.log(updated)
 
     updated = updated.filter(function (item) {
       return item._id !== post._id

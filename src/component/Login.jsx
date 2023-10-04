@@ -43,8 +43,8 @@ const handleClick = async (event) => {
     try{
     const response = await fetch('https://jolubook-backend-production.up.railway.app/api/users/login', requestOptions);
     const Data = await response.json();
-    console.log("USER INFO I")
-    console.log(Data);
+    // console.log("USER INFO I")
+    // console.log(Data);
     
     if(Data.success){
     localStorage.setItem("userInfo1", JSON.stringify(Data));
@@ -57,7 +57,7 @@ const handleClick = async (event) => {
     throw Data
   }
   }catch(Data){
-      console.log(Data)
+      // console.log(Data)
       toast.warning(Data.errors,{position: toast.POSITION.TOP_LEFT,autoClose:1000})
       setLoading(false)
 

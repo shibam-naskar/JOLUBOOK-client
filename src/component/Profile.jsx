@@ -18,7 +18,7 @@ import NavBar from "./NavBar";
 
 const Profile = () => {
   const params = useParams();
-  console.log(params.id);
+  // console.log(params.id);
   const nav = useNavigate();
 
   const [value, SetValues] = useState({
@@ -58,7 +58,7 @@ const clickfollow  = ()=> {
         ).then((data)=>{
           if(data)
           {
-            console.log(data)
+            // console.log(data)
             if(!value.following)
              toast.success(`following ${value.user.name}!`,{position: toast.POSITION.TOP_RIGHT,autoClose:1000})
              else
@@ -69,8 +69,8 @@ const clickfollow  = ()=> {
           }
         })
    }
-  console.log(posts);
-  console.log(value);
+  // console.log(posts);
+  // console.log(value);
   return (
 <div>
   <NavBar/>

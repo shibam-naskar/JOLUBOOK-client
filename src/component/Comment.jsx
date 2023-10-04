@@ -10,7 +10,7 @@ let [x , setx]=useState(2)
 let [comments,setComments]=useState(props.comments)
 const jwt = auth.isAuthenticated()
 const user1 = jwt1(jwt.token);
-console.log(props.comments)
+// console.log(props.comments)
 
 const deleteComment = comment => event => {
     uncomment({

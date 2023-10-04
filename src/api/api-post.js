@@ -19,8 +19,8 @@ const create = async (params, credentials, post) => {
     let response = await fetch('https://jolubook-backend-production.up.railway.app/api/post/' + params.userId, requestOptions)
 
     const Data = await response.json();
-    console.log("post data here");
-    console.log(Data)
+    // console.log("post data here");
+    // console.log(Data)
     return Data;
   } catch (err) {
     return err
@@ -90,7 +90,7 @@ const findPeoplee = async (params, credentials, signal) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 const remove = async (params, credentials) => {
@@ -105,13 +105,13 @@ const remove = async (params, credentials) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 
 const follow = async (params, credentials, followId) => {
 
-  console.log("fl")
+  // console.log("fl")
 
   try {
     let response = await fetch('https://jolubook-backend-production.up.railway.app/api/users/follow/', {
@@ -125,13 +125,13 @@ const follow = async (params, credentials, followId) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 
 }
 
 const unfollow = async (params, credentials, unfollowId) => {
-  console.log("unfl")
+  // console.log("unfl")
 
 
 
@@ -147,7 +147,7 @@ const unfollow = async (params, credentials, unfollowId) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 
 }
@@ -169,7 +169,7 @@ const Like = async (params, credentials, postId) => {
     return await response.json()
 
   } catch (error) {
-    console.log(error)
+    // console.log(error)
   }
 }
 
@@ -191,7 +191,7 @@ const unlike = async (params, credentials, postId) => {
     return await response.json()
 
   } catch (error) {
-    console.log(error)
+    // console.log(error)
   }
 }
 
@@ -208,7 +208,7 @@ const comment = async (params, credentials, postId, comment) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 
@@ -224,7 +224,7 @@ const read = async (params, credentials, signal) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 const checkFollow = (user, jwt) => {
@@ -249,11 +249,11 @@ const update = async (params, credentials, Values) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 const uncomment = async (params, credentials, postId, comment) => {
-  console.log(params.userId, postId, comment)
+  // console.log(params.userId, postId, comment)
 
   try {
     let response = await fetch('https://jolubook-backend-production.up.railway.app/api/post/uncomment/', {
@@ -267,12 +267,12 @@ const uncomment = async (params, credentials, postId, comment) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 
 const searchuser = async (params, credentials, se) => {
-  console.log(se);
+  // console.log(se);
   try {
     let response = await fetch(`https://jolubook-backend-production.up.railway.app/api/users/?search=${se.search}`, {
       method: 'GET',
@@ -284,7 +284,7 @@ const searchuser = async (params, credentials, se) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 
@@ -301,12 +301,12 @@ const getChat = async (params, credentials, se) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 
 const getMessage = async (params, credentials, se) => {
-  console.log(se)
+  // console.log(se)
   try {
     let response = await fetch(`https://jolubook-backend-production.up.railway.app/api/message/${se}`, {
       method: 'Get',
@@ -318,12 +318,12 @@ const getMessage = async (params, credentials, se) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 
 const setMessage = async (params, credentials, se) => {
-  console.log(params)
+  // console.log(params)
   try {
     let response = await fetch(`https://jolubook-backend-production.up.railway.app/api/message/`, {
       method: 'Post',
@@ -336,7 +336,7 @@ const setMessage = async (params, credentials, se) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 
@@ -353,7 +353,7 @@ const fetchChats = async (params, credentials, se) => {
     })
     return await response.json()
   } catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 

@@ -72,7 +72,7 @@ const NavBar = () => {
   })
 
 
-  console.log(user1);
+  // console.log(user1);
 
   useEffect(() => {
     searchuser(
@@ -99,7 +99,7 @@ const NavBar = () => {
       t: jwt.token
     },).then((data) => {
       if (data)
-        console.log(data)
+        // console.log(data)
       setValues({ ...values, id: data._id, name: data.name, email: data.email, image: data.image, about: data.about, update: data.updated });
     })
 
@@ -185,7 +185,7 @@ const NavBar = () => {
               auth.signOut()
               .then(() => {
                 // Sign-out successful.
-                console.log('User signed out successfully');
+                // console.log('User signed out successfully');
               })
               .catch((error) => {
                 // An error happened.

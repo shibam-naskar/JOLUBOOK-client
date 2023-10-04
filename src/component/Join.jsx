@@ -106,10 +106,10 @@ const Join = () => {
       ).then((data) => {
         setMessages(data);
         socket.emit("join chat", chat._id);
-        console.log(data);
+        // console.log(data);
       });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -175,7 +175,7 @@ const Join = () => {
   }, [chat]);
 
   useEffect(() => {
-    console.log(user1);
+    // console.log(user1);
     socket = io("https://jolubook-backend-production.up.railway.app/");
     socket.emit("setup", user1);
     socket.on("connected", () => Setsocketc(true));
@@ -193,7 +193,7 @@ const Join = () => {
       }
     ).then((data) => {
       if (data) setChats(data);
-      console.log(data);
+      // console.log(data);
     });
   }, [fetchAgain]);
   useEffect(() => {

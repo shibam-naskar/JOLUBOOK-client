@@ -17,7 +17,7 @@ const EditProfile = () => {
 
 const nav=useNavigate();
     const params = useParams();
-    console.log(params)
+    // console.log(params)
 
   const [picLoading, setPicLoading] = useState(false);
   const [picLoading1, setPicLoading1] = useState(false);
@@ -27,7 +27,7 @@ const nav=useNavigate();
   const jwt = auth.isAuthenticated()
   const user1 = jwt1(jwt.token);
 
-  console.log(user1);
+  // console.log(user1);
 
 
   useEffect(()=>{
@@ -37,7 +37,7 @@ const nav=useNavigate();
       t: jwt.token
     },).then((data)=>{
         if(data)
-        console.log(data)
+        // console.log(data)
         setValues({...values,name:data.name , email:data.email , image:data.image , about:data.about,update:data.updated});
     })
     
@@ -61,7 +61,7 @@ const ImageHander=(pics)=>
         .then((res) => res.json())
         .then((data) => {
           setValues({...values,image:data.url.toString()})
-          console.log(data.url.toString());
+          // console.log(data.url.toString());
           setPicLoading1(false);
           return 
         })

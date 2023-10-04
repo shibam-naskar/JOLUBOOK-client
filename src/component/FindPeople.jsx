@@ -43,14 +43,14 @@ const FindPeople = () => {
 
     const jwt = auth.isAuthenticated()
     const user1 = jwt1(jwt.token);
-    console.log(index)
+    // console.log(index)
 
     follow({
       userId: user1.id
     }, {
       t: jwt.token
     }, user._id).then((data) => {
-      console.log(data)
+      // console.log(data)
       let toFollow = values.users
       toFollow.splice(index, 1)
 
@@ -60,7 +60,7 @@ const FindPeople = () => {
 
     })
   }
-  console.log(values.users)
+  // console.log(values.users)
 
 
   return (
