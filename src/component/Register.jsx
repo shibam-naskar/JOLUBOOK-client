@@ -44,12 +44,17 @@ const Register = ({ history }) => {
 
     signInWithPopup(auth, new GoogleAuthProvider()).then((data) => {
       console.log(data.user)
-      var finaldata = {
-        "email": data.user.email,
-        "name": data.user.displayName,
-        "dp":data.user.photoURL
+      if(data.user.email.toString().endsWith("jgec.ac.in")){
+        var finaldata = {
+          "email": data.user.email,
+          "name": data.user.displayName,
+          "dp":data.user.photoURL
+        }
+        CallApiReg(finaldata);
+      }else{
+        toast.warning("Only JGEC Strudents are allowed.", { position: toast.POSITION.TOP_LEFT, autoClose: 3000 })
+        setLoading(false)
       }
-      CallApiReg(finaldata);
 
 
       // setValue(data.user.email)
