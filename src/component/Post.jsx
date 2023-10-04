@@ -25,7 +25,7 @@ const Post = (props1) => {
 
 
 
-  const submitHandler = async (props) => {
+  const submitHandler = async (event,props) => {
 
     setPicLoading(true);
 
@@ -53,7 +53,7 @@ const Post = (props1) => {
 
       })
       setText('')
-      document.getElementById('file').value = "";
+      // document.getElementById('file').value = "";
       setPicLoading(false);
     } catch (error) {
       setPicLoading(false);
@@ -61,6 +61,7 @@ const Post = (props1) => {
       toast.error('SomeThing Wrong', { position: toast.POSITION.TOP_LEFT, autoClose: 1000 })
     };
     setPicLoading(false);
+    event.preventDefault()
 
   };
 

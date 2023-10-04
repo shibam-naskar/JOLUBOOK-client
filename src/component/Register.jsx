@@ -82,7 +82,7 @@ const Register = ({ history }) => {
 
     // };
 
-    // const response = await fetch('http://localhost:4000/api/users/register', requestOptions)
+    // const response = await fetch('https://jolubook-backend-production.up.railway.app/api/users/register', requestOptions)
     // const Data = await response.json();
 
     // if (!Data.error) {
@@ -106,7 +106,7 @@ const Register = ({ history }) => {
 
     };
 
-    const response = await fetch('http://localhost:4000/api/users/register', requestOptions)
+    const response = await fetch('https://jolubook-backend-production.up.railway.app/api/users/register', requestOptions)
     const Data = await response.json();
 
     if (!Data.error) {
